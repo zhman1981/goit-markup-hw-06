@@ -469,6 +469,7 @@ address {
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    fill: var(--white-text-color);
     transition: color 250ms var(--cubic), fill 250ms var(--cubic);
 }
     
@@ -480,7 +481,6 @@ address {
 
 .footer-signup-btn-img {
     margin-left: 10px;
-    fill: var(--white-text-color);
 }
 
 .portfolio-btn {
@@ -640,6 +640,13 @@ address {
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    fill: var(--black-text-color);
+    transition: fill 250ms var(--cubic);
+}
+
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+    fill: var(--button-bg-color);
 }
 
 .send-block {
@@ -673,13 +680,41 @@ address {
     margin-bottom: 4px;
 }
 
+.container-input {
+    position: relative;
+    transition: fill 250ms var(--cubic);
+}
+
 .send-input {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     height: 40px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--secondary-text-color);    
+    padding-left: 42px;
+    transition: border-color 250ms var(--cubic);
 }
 
-.send-label +.send-input {
+.send-input:hover,
+.send-input:focus {
+    border-color: var(--button-bg-color);
+}
+
+.container-input:hover,
+.container-input:focus {
+    fill: var(--button-bg-color);
+}
+
+.send-icon {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+}
+
+.send-label +.container-input {
     margin-bottom: 10px;
 }
 
@@ -693,18 +728,51 @@ address {
     border-radius: 4px;
     resize: none;
     color: rgba(117, 117, 117, 0.5);
+    transition: border-color 250ms var(--cubic);
+}
+
+.send-coment:hover,
+.send-coment:focus {
+    border-color: var(--button-bg-color);
 }
 
 .confirm-label {
+    position: relative;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color:var(--secondary-text-color);
 }
 .confirm-block {
+    position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
     margin-bottom: 30px;
+}
+
+.checkbox {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.confirm-icon {
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    border: 1px solid var(--primary-text-color);
+}
+
+.checkbox:checked ~ .confirm-icon-apply {
+    opacity: 1;
+}
+
+.confirm-icon-apply {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    opacity: 0;
 }
 
 .confirm-agreement {
