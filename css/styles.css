@@ -413,7 +413,7 @@ address {
 }
 
 .footer-signup {
-    margin-left: 93px;
+    margin-left: auto;
 }
 
 .footer-signup-text {
@@ -472,7 +472,13 @@ address {
     fill: var(--white-text-color);
     transition: color 250ms var(--cubic), fill 250ms var(--cubic);
 }
-    
+
+.footer-signup-btn-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .footer-signup-btn:hover,
 .footer-signup-btn:focus {
     color: var(--black-text-color);
@@ -620,6 +626,7 @@ address {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 40px;
     width: 528px;
     height: 581px;
     background-color: var(--primary-bg-color);
@@ -649,10 +656,6 @@ address {
     fill: var(--button-bg-color);
 }
 
-.send-block {
-    padding: 40px;
-}
-
 .send-title {
     display: flex;
     align-items: center;
@@ -669,7 +672,7 @@ address {
 .send-form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .send-label {
@@ -748,7 +751,7 @@ address {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .checkbox {
@@ -759,6 +762,7 @@ address {
 
 .confirm-icon {
     display: inline-block;
+    margin-right: 8px;
     width: 14px;
     height: 13px;
     border: 1px solid var(--primary-text-color);
